@@ -1,0 +1,143 @@
+#mobile-documentation-nav {
+    display: none;
+}
+.documentation h4 {
+    border-bottom: 1px solid #ddd;
+    margin-top: 60px;
+}
+code {
+    overflow-x: scroll;
+}
+@media (max-width: 900px) {
+    .documentation .sidebar {
+        display: none;
+    }
+    .small-9 {
+        width: 100% !important;
+    }
+    #mobile-documentation-nav {
+        display: block;
+    }
+}
+.api-list {
+    width: 100%;
+    margin: 0;
+}
+.api-list li {
+    width: 25%;
+    display: inline-block;
+}
+.background-styles-list,
+.layouts-list {
+    width: 100%;
+    margin: 0;
+}
+.background-styles-list li,
+.layouts-list li {
+    width: 25%;
+    display: inline-block;
+}
+.background-styles-list li,
+.layouts-list li {
+    width: 30%;
+}
+
+pre, code{
+    font-weight:normal;
+}
+
+ul{
+    list-style:none;
+}
+
+.sidebar {
+    background-image: -webkit-linear-gradient(top, #ffffff, #dddddd 35%, #dddddd 65%, #ffffff);
+    background-image: linear-gradient(to bottom, #ffffff, #dddddd 35%, #dddddd 65%, #ffffff);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 1px 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 3.01887%;
+    vertical-align: top;
+    padding-left: 1.1em;
+    padding-top: 10px;
+    min-height: 500px;
+}
+.sidebar ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 3.125em;
+    padding: 0;
+    float: left;
+    width: 100%;
+    margin-left: 0;
+}
+.sidebar ul li {
+    display: inline-block;
+    float: left;
+    clear: both;
+}
+.sidebar h3 {
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0;
+    float: left;
+    clear: both;
+    margin-top: 30px;
+    color:#676767;
+}
+.sidebar h3:first-child {
+    margin-top: 0;
+}
+.sidebar a {
+    line-height: 2;
+}
+.sidebar .active {
+    font-weight: bold;
+}
+
+element.style {
+}
+.row, .top-bar, .sub-header h1 {
+    max-width: 1280px;
+}
+.sub-header h1 {
+    color: #40265d;
+    font-size: 2em;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+
+.sub-header {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 2.25em 0;
+}
+
+#content {
+    padding: 60px 0;
+}
+
+.row, .top-bar, .sub-header h1 {
+    max-width: 1000px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #40265d;
+    font-weight: 200;
+}
+
+h4 {
+    border-bottom: 1px solid #ddd;
+    margin-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:#444;
+}

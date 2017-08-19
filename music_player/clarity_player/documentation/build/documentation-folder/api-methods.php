@@ -1,0 +1,300 @@
+<h2>API Methods</h2>
+
+<br>
+<ul class="api-list">
+<li><a href="#start">start</a></li>
+<li><a href="#hasStarted">hasStarted</a></li>
+<li><a href="#destroy">destroy</a></li>
+<li><a href="#setLayout">setLayout</a></li>
+<li><a href="#manageLayout">manageLayout</a></li>
+<li><a href="#on">on</a></li>
+<li><a href="#once">once</a></li>
+<li><a href="#off">off</a></li>
+<li><a href="#getOptions">getOptions</a></li>
+<li><a href="#redraw">redraw</a></li>
+<li><a href="#play">play</a></li>
+<li><a href="#pause">pause</a></li>
+<li><a href="#prev">prev</a></li>
+<li><a href="#next">next</a></li>
+<li><a href="#togglePlay">togglePlay</a></li>
+<li><a href="#setOptions">setOptions</a></li>
+<li><a href="#swapPlaylist">swapPlaylist</a></li>
+</ul>
+
+<div class="clear"></div>
+
+<h4 id="start">start</h4>
+<p>
+    If autoStart is set to false, this function allows you to manually start the plugin. If necessary, you can pass
+    configuration parameters to this function
+</p>
+
+<pre>
+    <code>
+    var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+    clarity.start(layoutParams);
+    </code>
+</pre>
+
+
+<h4 id="hasStarted">hasStarted</h4>
+<p>
+    This function allows you to check if the Clarity instance has started
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        if(clarity.hasStarted()){
+            //do something is the instance has started
+        }
+        else{
+            //the instance hasn't started. Do something else
+        }
+    </code>
+</pre>
+
+
+
+<h4 id="destroy">destroy</h4>
+<p>
+    This function allows you to destroy a Clarity instance, removing it from the page
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.destroy();
+    </code>
+</pre>
+
+
+<h4 id="setLayout">setLayout</h4>
+<p>
+    This function allows you to set the current layout
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.setLayout({
+            layout:'single-album-cover',
+            styleType:'blur'
+        });
+    </code>
+</pre>
+
+
+<h4 id="manageLayout">manageLayout</h4>
+<p>
+    This function will set the layout based on the container size. If the container is bigger than smallScreenSize then
+    this function will load the layout specified in the 'layout' parameter. If the container is smaller than
+    smallScreenSize it will load the layout specified in the 'smallScreenLayout' parameter. Normally, the plugin will
+    resize itself if the size of the window changes, but if you manually resize the container size, this function
+    becomes very useful.
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.manageLayout();
+    </code>
+</pre>
+
+
+<h4 id="on">on</h4>
+<p>
+    Attach an event handler function for one or more events.
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.on('playlistInit', function(){
+            //do something when the playlist initializes
+        });
+    </code>
+</pre>
+
+
+<h4 id="once">once</h4>
+<p>
+    Just like on, but causes the bound callback to only fire once before being removed. Handy for saying "the next time
+    that X happens, do this".
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.once('playlistAdvance', function(){
+            //do something when the playlist initializes
+        });
+    </code>
+</pre>
+
+
+<h4 id="off">off</h4>
+<p>
+    Unbind an event handler. This works similarly to the jQuery off function.
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        //EXAMPLE 1
+        //unbind all handlers for an event
+        clarity.on('playlistAdvance', function(){
+            //do something
+        });
+
+        clarity.off('playlistAdvance');
+
+
+        //EXAMPLE 2
+        //unbind a specific handler
+        var someHandler = function(){
+            //do stuff
+        }
+
+        clarity.on('playlistAdvance', someHandler);
+
+        clarity.off('playlistAdvance', someHandler);
+    </code>
+</pre>
+
+<h4 id="getOptions">getOptions</h4>
+<p>
+    Returns the current options object.
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist),
+            options = clarity.getOptions();
+    </code>
+</pre>
+
+
+<h4 id="redraw">redraw</h4>
+<p>
+    Redraws the current layout and background
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.redraw();
+    </code>
+</pre>
+
+
+
+<h4 id="play">play</h4>
+<p>
+    Starts playback
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.play();
+    </code>
+</pre>
+
+
+
+<h4 id="pause">pause</h4>
+<p>
+    Pauses playback
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.pause();
+    </code>
+</pre>
+
+
+<h4 id="next">next</h4>
+<p>
+    Advances to the next song in the playlist
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.next();
+    </code>
+</pre>
+
+
+<h4 id="prev">prev</h4>
+<p>
+    Plays the previous song in the playlist
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.prev();
+    </code>
+</pre>
+
+
+
+
+<h4 id="togglePlay">togglePlay</h4>
+<p>
+    Pauses if Clarity is currently playing. Starts playing if it's currently paused.
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.togglePlay();
+    </code>
+</pre>
+
+<h4 id="setOptions">setOptions</h4>
+<p>
+    Allows you to set options after the plugin has already initialized
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        clarity.setOptions({
+            smallScreenLayout:'info'
+        });
+    </code>
+</pre>
+
+<h4 id="swapPlaylist">swapPlaylist</h4>
+<p>
+    Allows you to swap the playlist after the plugin has already initialized
+</p>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist);
+
+        //new playlist should be an array
+        clarity.swapPlaylist(newPlaylist);
+    </code>
+</pre>

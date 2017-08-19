@@ -1,0 +1,176 @@
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/github.css"/>
+
+
+</head>
+
+
+
+
+<body data-page="documentation">
+
+<div class="sub-header">
+    <h1>Documentation</h1>
+</div>
+
+<div id="content">
+
+
+    <div class="row">
+        <div class="small-3 columns sidebar">
+            <aside >
+                <ul>
+                    <li><h3>Installation & Usage</h3></li>
+                    <li><a  href="quick-start.html">Quick Start</a></li>
+                    <li><a  href="detailed-installation.html">Detailed Installation</a></li>
+                    <li><a  href="playlist.html">Playlist Setup</a></li>
+                    <li><a  href="options.html">Plugin Options</a></li>
+
+
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>Layouts & Styles</h3>
+                    </li>
+                    <li><a class='active' href="layouts.html">Layouts</a></li>
+                </ul>
+
+                <ul>
+                    <li><h3>API</h3></li>
+                    <li><a  href="api.html">Overview</a></li>
+                    <li><a  href="api-methods.html">Methods</a></li>
+                    <li><a  href="api-events.html">Events</a></li>
+
+                </ul>
+
+
+
+            </aside>
+        </div>
+        <div class="small-9 columns">
+
+            <select id="mobile-documentation-nav">
+                    <option value="quick-start">Quick Start</option>
+                    <option value="detailed-installation">Detailed Installation</option>
+                    <option value="playlist">Playlist Setup</option>
+                    <option value="options">Plugin Options</option>
+                    <option value="background-styles">Background Styles</option>
+                    <option value="layouts">Layouts</option>
+                    <option value="api">API Overview</option>
+                    <option value="api-methods">API Methods</option>
+                    <option value="api-events">API Events</option>
+            </select>
+            <h2>Layouts</h2>
+<p>There are several layouts to chose from</p>
+
+<br>
+<ul class="layouts-list">
+    <li><a href="#album-covers">Album Cover Slider</a></li>
+    <li><a href="#album-cover-and-list">Album Cover & List</a></li>
+    <li><a href="#single-album-cover">Single Album Cover</a></li>
+
+    <li><a href="#list">List</a></li>
+    <li><a href="#blank">Blank</a></li>
+
+</ul>
+
+<h4 id="album-covers">Album Cover Slider</h4>
+<p>Displays a carousel of 3 album covers. The middle cover is the current song, the left cover is the previous song and
+    the right cover is the next song
+    <br>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist, {
+            layout:'album-covers'
+        });
+    </code>
+</pre>
+
+</p>
+
+
+<h4 id="single-album-cover">Single Album Cover</h4>
+<p>Displays the album cover for the current song
+    <br>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist, {
+            layout:'single-album-cover'
+        });
+    </code>
+</pre>
+</p>
+
+
+<h4 id="album-cover-and-list">Album Cover & List</h4>
+<p>
+    Displays the album cover of the current song alongside a list of all songs in the playlist
+    <br>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist, {
+            layout:'album-cover-and-list'
+        });
+    </code>
+</pre>
+</p>
+
+<
+
+<h4 id="list">List</h4>
+<p>A list of all songs in the playlist
+    <br>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist, {
+            layout:'list'
+        });
+    </code>
+</pre>
+</p>
+
+
+
+<h4 id="blank">Blank</h4>
+<p>This is a blank layout
+    <br>
+
+<pre>
+    <code>
+        var clarity = $('#myPlayer').ttwClarityPlayer(myPlaylist, {
+            layout:'blank'
+        });
+    </code>
+</pre>
+</p>
+
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script type="text/javascript">
+    console.log(hljs);
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
